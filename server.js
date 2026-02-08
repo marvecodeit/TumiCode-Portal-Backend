@@ -30,7 +30,7 @@ app.use("/api/upload", uploadRoute); // Upload route
 const server = http.createServer(app);
 
 const io = new Server(server, {
-  cors: { origin: "http://localhost:5173", methods: ["GET", "POST"], credentials: true },
+  cors: { origin: "https://portal-tumicodes.vercel.app/", methods: ["GET", "POST"], credentials: true },
 });
 
 app.set("io", io);
