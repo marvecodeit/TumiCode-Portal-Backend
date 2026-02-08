@@ -17,7 +17,7 @@ const app = express();
 
 /* ================= MIDDLEWARE ================= */
 app.use(express.json());
-app.use(cors({ origin: ["https://portal-tumicodes.vercel.app/"], credentials: true }));
+app.use(cors({ origin: ["https://portal-tumicodes.vercel.app"], credentials: true }));
 
 /* ================= ROUTES ================= */
 app.use("/api/auth", authRoutes);
@@ -30,7 +30,7 @@ app.use("/api/upload", uploadRoute); // Upload route
 const server = http.createServer(app);
 
 const io = new Server(server, {
-  cors: { origin: "https://portal-tumicodes.vercel.app/", methods: ["GET", "POST"], credentials: true },
+  cors: { origin: "https://portal-tumicodes.vercel.app", methods: ["GET", "POST"], credentials: true },
 });
 
 app.set("io", io);
