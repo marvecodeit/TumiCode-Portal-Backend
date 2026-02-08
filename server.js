@@ -17,7 +17,7 @@ const app = express();
 
 /* ================= MIDDLEWARE ================= */
 app.use(express.json());
-app.use(cors({ origin: ["http://localhost:5173"], credentials: true }));
+app.use(cors({ origin: ["https://portal-tumicodes.vercel.app/"], credentials: true }));
 
 /* ================= ROUTES ================= */
 app.use("/api/auth", authRoutes);
